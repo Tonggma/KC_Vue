@@ -1,0 +1,30 @@
+<template>
+  <video :src="videoSrc" loop autoplay></video>
+</template>
+
+<script>
+export default {
+  name: "VideoBackground",
+  data: function () {
+    return {
+      // publicPath: process.env.BASE_URL,
+      videoSrc: require("./../../public/img/cdxy5.jpg"),
+    };
+  },
+};
+</script>
+
+<style>
+video {
+  position: fixed;
+  right: 0;
+  min-height: 100%;
+  min-width: 100%;
+  height: auto;
+  width: auto;
+  /*加滤镜*/
+  /* filter: blur(15px); 背景模糊设置 */
+  /* -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); 背景灰度设置 */
+}
+</style>
